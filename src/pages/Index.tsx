@@ -71,7 +71,7 @@ const Index = () => {
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-2">
                 <img 
-                  src="/img/f9912e0a-25b7-4150-b3b0-6d0631cc36f1.jpg" 
+                  src="/img/9174b0e2-ce66-468e-b4b8-66023143b4fd.jpg" 
                   alt="ШинОил логотип" 
                   className="w-16 h-16 object-contain"
                 />
@@ -474,7 +474,7 @@ const Index = () => {
             <div>
               <div className="flex items-center space-x-2 mb-4">
                 <img 
-                  src="/img/f9912e0a-25b7-4150-b3b0-6d0631cc36f1.jpg" 
+                  src="/img/9174b0e2-ce66-468e-b4b8-66023143b4fd.jpg" 
                   alt="ШинОил логотип" 
                   className="w-12 h-12 object-contain"
                 />
