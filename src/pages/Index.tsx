@@ -71,11 +71,10 @@ const Index = () => {
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-2">
                 <img 
-                  src="/img/2d64d5a1-e700-4cb5-9587-032ae1536e5d.jpg" 
-                  alt="ШинОил логотип" 
-                  className="w-12 h-12 object-contain"
+                  src="/img/904a02b9-6a53-40e3-91c7-9ee194323cea.jpg" 
+                  alt="ShinOil логотип" 
+                  className="h-12 w-auto object-contain"
                 />
-                <h1 className="text-2xl font-bold font-roboto text-navy-600">ШинОил</h1>
               </div>
             </div>
             <nav className="hidden md:flex items-center space-x-8">
@@ -474,11 +473,10 @@ const Index = () => {
             <div>
               <div className="flex items-center space-x-2 mb-4">
                 <img 
-                  src="/img/2d64d5a1-e700-4cb5-9587-032ae1536e5d.jpg" 
-                  alt="ШинОил логотип" 
-                  className="w-8 h-8 object-contain"
+                  src="/img/904a02b9-6a53-40e3-91c7-9ee194323cea.jpg" 
+                  alt="ShinOil логотип" 
+                  className="h-8 w-auto object-contain"
                 />
-                <h3 className="text-xl font-bold font-roboto">ШинОил</h3>
               </div>
               <p className="text-gray-400 font-open-sans">
                 Ваш надежный партнер в мире автомобильных масел и шин
