@@ -1,17 +1,17 @@
 export interface OilProduct {
-  id: number;
-  name: string;
-  brand: string;
-  category: string;
-  viscosity: string;
-  volume: string;
-  price: number;
-  stock: string;
-  image: string;
-  description: string;
+  id: 3709;
+  name: 'Top Tec 4200 New Generation';
+  brand: 'Liqui Moly';
+  category: 'Синтетическое';
+  viscosity: '5W-30';
+  volume: '60 л';
+  price: 86900;
+  stock: 'В наличии';
+  image: '/img/"C:\Users\corsi\OneDrive\Рабочий стол\Леша\Фото Ассортимента\LM\3709.jpg"';
+  description: 'Синтетическое малозольное (Mid SAPS) моторное масло для двигателей легковых автомобилей, оснащенных двойной системой нейтрализации отработавших газов (в том числе DPF). Cоответствует экологическим нормам EURO 4 и выше.';
   specifications: {
-    api: string;
-    acea: string;
+    api: 'SP';
+    acea: 'C3';
     temperature: string;
   };
 }
