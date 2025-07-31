@@ -5,8 +5,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
+import { useNavigate } from 'react-router-dom';
 
 export default function Index() {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     company: '',
     contact: '',
@@ -47,7 +49,12 @@ export default function Index() {
               </div>
             </div>
             <nav className="hidden md:flex items-center space-x-6">
-              <a href="#catalog" className="text-slate-700 hover:text-blue-600 transition-colors">Каталог</a>
+              <button 
+                onClick={() => navigate('/catalog')}
+                className="text-slate-700 hover:text-blue-600 transition-colors"
+              >
+                Каталог
+              </button>
               <a href="#about" className="text-slate-700 hover:text-blue-600 transition-colors">О компании</a>
               <a href="#order" className="text-slate-700 hover:text-blue-600 transition-colors">Заказ</a>
               <a href="#contacts" className="text-slate-700 hover:text-blue-600 transition-colors">Контакты</a>
@@ -69,7 +76,11 @@ export default function Index() {
             по выгодным ценам для автосервисов, станций техобслуживания и дилеров.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white">
+            <Button 
+              size="lg" 
+              className="bg-orange-500 hover:bg-orange-600 text-white"
+              onClick={() => navigate('/catalog')}
+            >
               <Icon name="ShoppingCart" size={20} className="mr-2" />
               Посмотреть каталог
             </Button>
@@ -125,7 +136,11 @@ export default function Index() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-slate-600 mb-4">Mobil, Castrol, Shell, Lukoil, Rosneft</p>
-                <Button variant="outline" className="w-full">
+                <Button 
+                  variant="outline" 
+                  className="w-full"
+                  onClick={() => navigate('/catalog')}
+                >
                   <Icon name="Eye" size={16} className="mr-2" />
                   Смотреть все
                 </Button>
@@ -142,7 +157,11 @@ export default function Index() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-slate-600 mb-4">ATF, CVT, дифференциальные масла</p>
-                <Button variant="outline" className="w-full">
+                <Button 
+                  variant="outline" 
+                  className="w-full"
+                  onClick={() => navigate('/catalog')}
+                >
                   <Icon name="Eye" size={16} className="mr-2" />
                   Смотреть все
                 </Button>
@@ -159,7 +178,11 @@ export default function Index() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-slate-600 mb-4">Michelin, Bridgestone, Continental, Nokian</p>
-                <Button variant="outline" className="w-full">
+                <Button 
+                  variant="outline" 
+                  className="w-full"
+                  onClick={() => navigate('/catalog')}
+                >
                   <Icon name="Eye" size={16} className="mr-2" />
                   Смотреть все
                 </Button>
@@ -176,7 +199,11 @@ export default function Index() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-slate-600 mb-4">Nokian, Gislaved, Pirelli, Yokohama</p>
-                <Button variant="outline" className="w-full">
+                <Button 
+                  variant="outline" 
+                  className="w-full"
+                  onClick={() => navigate('/catalog')}
+                >
                   <Icon name="Eye" size={16} className="mr-2" />
                   Смотреть все
                 </Button>
@@ -193,7 +220,11 @@ export default function Index() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-slate-600 mb-4">Felix, ATE, Castrol, Hi-Gear, Sonax</p>
-                <Button variant="outline" className="w-full">
+                <Button 
+                  variant="outline" 
+                  className="w-full"
+                  onClick={() => navigate('/catalog')}
+                >
                   <Icon name="Eye" size={16} className="mr-2" />
                   Смотреть все
                 </Button>
