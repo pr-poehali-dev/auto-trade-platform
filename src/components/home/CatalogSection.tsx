@@ -21,7 +21,10 @@ export default function CatalogSection() {
               <CardDescription>Синтетические, полусинтетические, минеральные</CardDescription>
             </CardHeader>
             <CardContent>
-              <p className="text-sm text-slate-600 mb-4">Mobil, Castrol, Shell, Lukoil, Rosneft</p>
+              <div className="mb-3">
+                <p className="text-xs text-slate-500 mb-1">Артикул: MO-001-099</p>
+                <p className="text-sm text-slate-600">Mobil, Castrol, Shell, Lukoil, Rosneft</p>
+              </div>
               <Button 
                 variant="outline" 
                 className="w-full"
@@ -42,7 +45,10 @@ export default function CatalogSection() {
               <CardDescription>Для механических и автоматических КПП</CardDescription>
             </CardHeader>
             <CardContent>
-              <p className="text-sm text-slate-600 mb-4">ATF, CVT, дифференциальные масла</p>
+              <div className="mb-3">
+                <p className="text-xs text-slate-500 mb-1">Артикул: TR-002-087</p>
+                <p className="text-sm text-slate-600">ATF, CVT, дифференциальные масла</p>
+              </div>
               <Button 
                 variant="outline" 
                 className="w-full"
@@ -63,7 +69,10 @@ export default function CatalogSection() {
               <CardDescription>Легковые, грузовые, внедорожные</CardDescription>
             </CardHeader>
             <CardContent>
-              <p className="text-sm text-slate-600 mb-4">Michelin, Bridgestone, Continental, Nokian</p>
+              <div className="mb-3">
+                <p className="text-xs text-slate-500 mb-1">Артикул: SH-003-156</p>
+                <p className="text-sm text-slate-600">Michelin, Bridgestone, Continental, Nokian</p>
+              </div>
               <Button 
                 variant="outline" 
                 className="w-full"
@@ -84,7 +93,10 @@ export default function CatalogSection() {
               <CardDescription>Шипованные и фрикционные</CardDescription>
             </CardHeader>
             <CardContent>
-              <p className="text-sm text-slate-600 mb-4">Nokian, Gislaved, Pirelli, Yokohama</p>
+              <div className="mb-3">
+                <p className="text-xs text-slate-500 mb-1">Артикул: SH-004-234</p>
+                <p className="text-sm text-slate-600">Nokian, Gislaved, Pirelli, Yokohama</p>
+              </div>
               <Button 
                 variant="outline" 
                 className="w-full"
@@ -105,7 +117,10 @@ export default function CatalogSection() {
               <CardDescription>Антифризы, тормозные жидкости, очистители</CardDescription>
             </CardHeader>
             <CardContent>
-              <p className="text-sm text-slate-600 mb-4">Felix, ATE, Castrol, Hi-Gear, Sonax</p>
+              <div className="mb-3">
+                <p className="text-xs text-slate-500 mb-1">Артикул: AC-005-123</p>
+                <p className="text-sm text-slate-600">Felix, ATE, Castrol, Hi-Gear, Sonax</p>
+              </div>
               <Button 
                 variant="outline" 
                 className="w-full"
