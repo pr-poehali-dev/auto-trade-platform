@@ -72,10 +72,10 @@ const Index = () => {
               <div className="flex items-center space-x-2">
                 <img 
                   src="/img/2d64d5a1-e700-4cb5-9587-032ae1536e5d.jpg" 
-                  alt="ШинОил логотип" 
+                  alt="ShinOil логотип" 
                   className="w-12 h-12 object-contain"
                 />
-                <h1 className="text-2xl font-bold font-roboto text-navy-600">ШинОил</h1>
+                <h1 className="text-2xl font-bold font-roboto text-navy-600">ShinOil</h1>
               </div>
             </div>
             <nav className="hidden md:flex items-center space-x-8">
@@ -277,7 +277,7 @@ const Index = () => {
             <div className="animate-fade-in">
               <h2 className="text-4xl font-bold font-roboto text-navy-600 mb-6">О компании</h2>
               <p className="text-lg text-gray-700 font-open-sans mb-6">
-                «ШинОил» — ведущий поставщик автомобильных масел и шин на российском рынке. 
+                «ShinOil» — ведущий поставщик автомобильных масел и шин на российском рынке. 
                 Более 15 лет мы обеспечиваем автосервисы, дилерские центры и розничные магазины 
                 качественной продукцией от мировых производителей.
               </p>
@@ -475,10 +475,10 @@ const Index = () => {
               <div className="flex items-center space-x-2 mb-4">
                 <img 
                   src="/img/2d64d5a1-e700-4cb5-9587-032ae1536e5d.jpg" 
-                  alt="ШинОил логотип" 
+                  alt="ShinOil логотип" 
                   className="w-8 h-8 object-contain"
                 />
-                <h3 className="text-xl font-bold font-roboto">ШинОил</h3>
+                <h3 className="text-xl font-bold font-roboto">ShinOil</h3>
               </div>
               <p className="text-gray-400 font-open-sans">
                 Ваш надежный партнер в мире автомобильных масел и шин
@@ -514,7 +514,7 @@ const Index = () => {
           </div>
           <div className="border-t border-gray-700 mt-8 pt-8 text-center">
             <p className="text-gray-400 font-open-sans">
-              © 2024 ШинОил. Все права защищены.
+              © 2024 ShinOil. Все права защищены.
             </p>
           </div>
         </div>
