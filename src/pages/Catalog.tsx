@@ -10,7 +10,7 @@ export default function Catalog() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedBrand, setSelectedBrand] = useState('all');
   const [selectedViscosity, setSelectedViscosity] = useState('all');
-  const [priceRange, setPriceRange] = useState([0, 15000]);
+  const [priceRange, setPriceRange] = useState([0, 100000]);
   const [showFilters, setShowFilters] = useState(false);
   const [sortBy, setSortBy] = useState('name');
 

@@ -95,9 +95,10 @@ export default function SearchFilters({
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="all">Все бренды</SelectItem>
+                  <SelectItem value="Liqui Moly">Liqui Moly</SelectItem>
+                  <SelectItem value="Shell">Shell</SelectItem>
                   <SelectItem value="Castrol">Castrol</SelectItem>
                   <SelectItem value="Mobil">Mobil</SelectItem>
-                  <SelectItem value="Shell">Shell</SelectItem>
                   <SelectItem value="Lukoil">Lukoil</SelectItem>
                   <SelectItem value="Total">Total</SelectItem>
                   <SelectItem value="Rosneft">Rosneft</SelectItem>
@@ -107,6 +108,10 @@ export default function SearchFilters({
                   <SelectItem value="Nokian">Nokian</SelectItem>
                   <SelectItem value="Pirelli">Pirelli</SelectItem>
                   <SelectItem value="Yokohama">Yokohama</SelectItem>
+                  <SelectItem value="Felix">Felix</SelectItem>
+                  <SelectItem value="ATE">ATE</SelectItem>
+                  <SelectItem value="Hi-Gear">Hi-Gear</SelectItem>
+                  <SelectItem value="Sonax">Sonax</SelectItem>
                 </SelectContent>
               </Select>
             </div>
@@ -132,9 +137,9 @@ export default function SearchFilters({
               <Slider
                 value={priceRange}
                 onValueChange={setPriceRange}
-                max={15000}
+                max={100000}
                 min={0}
-                step={100}
+                step={500}
                 className="mt-2"
               />
             </div>
