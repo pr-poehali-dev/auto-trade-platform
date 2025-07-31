@@ -10,6 +10,10 @@ export default function Catalog() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedBrand, setSelectedBrand] = useState('all');
   const [selectedViscosity, setSelectedViscosity] = useState('all');
+  const [selectedSeason, setSelectedSeason] = useState('all');
+  const [selectedTireSize, setSelectedTireSize] = useState('all');
+  const [selectedChemicalType, setSelectedChemicalType] = useState('all');
+  const [selectedStock, setSelectedStock] = useState('all');
   const [priceRange, setPriceRange] = useState([0, 100000]);
   const [showFilters, setShowFilters] = useState(false);
   const [sortBy, setSortBy] = useState('name');
@@ -20,9 +24,10 @@ export default function Catalog() {
                          product.brand.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesBrand = selectedBrand === 'all' || product.brand === selectedBrand;
     const matchesViscosity = selectedViscosity === 'all' || product.viscosity === selectedViscosity;
+    const matchesStock = selectedStock === 'all' || product.stock === selectedStock;
     const matchesPrice = product.price >= priceRange[0] && product.price <= priceRange[1];
     
-    return matchesSearch && matchesBrand && matchesViscosity && matchesPrice;
+    return matchesSearch && matchesBrand && matchesViscosity && matchesStock && matchesPrice;
   });
 
   const filteredTires = tireProducts.filter(product => {
@@ -30,9 +35,12 @@ export default function Catalog() {
                          product.brand.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          product.size.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesBrand = selectedBrand === 'all' || product.brand === selectedBrand;
+    const matchesSeason = selectedSeason === 'all' || product.season === selectedSeason;
+    const matchesTireSize = selectedTireSize === 'all' || product.size === selectedTireSize;
+    const matchesStock = selectedStock === 'all' || product.stock === selectedStock;
     const matchesPrice = product.price >= priceRange[0] && product.price <= priceRange[1];
     
-    return matchesSearch && matchesBrand && matchesPrice;
+    return matchesSearch && matchesBrand && matchesSeason && matchesTireSize && matchesStock && matchesPrice;
   });
 
   const filteredChemicals = chemicalProducts.filter(product => {
@@ -40,9 +48,11 @@ export default function Catalog() {
                          product.brand.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          product.category.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesBrand = selectedBrand === 'all' || product.brand === selectedBrand;
+    const matchesChemicalType = selectedChemicalType === 'all' || product.category === selectedChemicalType;
+    const matchesStock = selectedStock === 'all' || product.stock === selectedStock;
     const matchesPrice = product.price >= priceRange[0] && product.price <= priceRange[1];
     
-    return matchesSearch && matchesBrand && matchesPrice;
+    return matchesSearch && matchesBrand && matchesChemicalType && matchesStock && matchesPrice;
   });
 
   return (
@@ -93,6 +103,14 @@ export default function Catalog() {
           setSelectedBrand={setSelectedBrand}
           selectedViscosity={selectedViscosity}
           setSelectedViscosity={setSelectedViscosity}
+          selectedSeason={selectedSeason}
+          setSelectedSeason={setSelectedSeason}
+          selectedTireSize={selectedTireSize}
+          setSelectedTireSize={setSelectedTireSize}
+          selectedChemicalType={selectedChemicalType}
+          setSelectedChemicalType={setSelectedChemicalType}
+          selectedStock={selectedStock}
+          setSelectedStock={setSelectedStock}
           priceRange={priceRange}
           setPriceRange={setPriceRange}
           showFilters={showFilters}

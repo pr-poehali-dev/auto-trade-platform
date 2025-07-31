@@ -14,6 +14,14 @@ interface SearchFiltersProps {
   setSelectedBrand: (value: string) => void;
   selectedViscosity: string;
   setSelectedViscosity: (value: string) => void;
+  selectedSeason: string;
+  setSelectedSeason: (value: string) => void;
+  selectedTireSize: string;
+  setSelectedTireSize: (value: string) => void;
+  selectedChemicalType: string;
+  setSelectedChemicalType: (value: string) => void;
+  selectedStock: string;
+  setSelectedStock: (value: string) => void;
   priceRange: number[];
   setPriceRange: (value: number[]) => void;
   showFilters: boolean;
@@ -31,6 +39,14 @@ export default function SearchFilters({
   setSelectedBrand,
   selectedViscosity,
   setSelectedViscosity,
+  selectedSeason,
+  setSelectedSeason,
+  selectedTireSize,
+  setSelectedTireSize,
+  selectedChemicalType,
+  setSelectedChemicalType,
+  selectedStock,
+  setSelectedStock,
   priceRange,
   setPriceRange,
   showFilters,
@@ -86,7 +102,7 @@ export default function SearchFilters({
       {/* Extended Filters */}
       {showFilters && (
         <Card className="p-6">
-          <div className="grid lg:grid-cols-4 gap-6">
+          <div className="grid lg:grid-cols-6 gap-4">
             <div>
               <label className="text-sm font-medium mb-2 block">Бренд</label>
               <Select value={selectedBrand} onValueChange={setSelectedBrand}>
@@ -115,21 +131,99 @@ export default function SearchFilters({
                 </SelectContent>
               </Select>
             </div>
+            
+            {/* Фильтр вязкости для масел */}
+            {(selectedCategory === 'all' || selectedCategory === 'oils') && (
+              <div>
+                <label className="text-sm font-medium mb-2 block">Вязкость</label>
+                <Select value={selectedViscosity} onValueChange={setSelectedViscosity}>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Все вязкости" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">Все вязкости</SelectItem>
+                    <SelectItem value="5W-30">5W-30</SelectItem>
+                    <SelectItem value="5W-40">5W-40</SelectItem>
+                    <SelectItem value="10W-40">10W-40</SelectItem>
+                    <SelectItem value="15W-40">15W-40</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+            )}
+
+            {/* Фильтр сезона для шин */}
+            {(selectedCategory === 'all' || selectedCategory === 'tires') && (
+              <div>
+                <label className="text-sm font-medium mb-2 block">Сезон</label>
+                <Select value={selectedSeason} onValueChange={setSelectedSeason}>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Все сезоны" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">Все сезоны</SelectItem>
+                    <SelectItem value="Летние">Летние</SelectItem>
+                    <SelectItem value="Зимние">Зимние</SelectItem>
+                    <SelectItem value="Всесезонные">Всесезонные</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+            )}
+
+            {/* Фильтр размера для шин */}
+            {(selectedCategory === 'all' || selectedCategory === 'tires') && (
+              <div>
+                <label className="text-sm font-medium mb-2 block">Размер</label>
+                <Select value={selectedTireSize} onValueChange={setSelectedTireSize}>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Все размеры" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">Все размеры</SelectItem>
+                    <SelectItem value="195/65 R15">195/65 R15</SelectItem>
+                    <SelectItem value="205/55 R16">205/55 R16</SelectItem>
+                    <SelectItem value="215/60 R16">215/60 R16</SelectItem>
+                    <SelectItem value="225/50 R17">225/50 R17</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+            )}
+
+            {/* Фильтр типа для автохимии */}
+            {(selectedCategory === 'all' || selectedCategory === 'chemicals') && (
+              <div>
+                <label className="text-sm font-medium mb-2 block">Тип химии</label>
+                <Select value={selectedChemicalType} onValueChange={setSelectedChemicalType}>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Все типы" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">Все типы</SelectItem>
+                    <SelectItem value="Антифриз">Антифриз</SelectItem>
+                    <SelectItem value="Тормозная жидкость">Тормозная жидкость</SelectItem>
+                    <SelectItem value="Промывка двигателя">Промывка двигателя</SelectItem>
+                    <SelectItem value="Очиститель стекол">Очиститель стекол</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+            )}
+
+            {/* Фильтр наличия */}
             <div>
-              <label className="text-sm font-medium mb-2 block">Вязкость (для масел)</label>
-              <Select value={selectedViscosity} onValueChange={setSelectedViscosity}>
+              <label className="text-sm font-medium mb-2 block">Наличие</label>
+              <Select value={selectedStock} onValueChange={setSelectedStock}>
                 <SelectTrigger>
-                  <SelectValue placeholder="Все вязкости" />
+                  <SelectValue placeholder="Все товары" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="all">Все вязкости</SelectItem>
-                  <SelectItem value="5W-30">5W-30</SelectItem>
-                  <SelectItem value="5W-40">5W-40</SelectItem>
-                  <SelectItem value="10W-40">10W-40</SelectItem>
-                  <SelectItem value="15W-40">15W-40</SelectItem>
+                  <SelectItem value="all">Все товары</SelectItem>
+                  <SelectItem value="В наличии">В наличии</SelectItem>
+                  <SelectItem value="Мало">Мало</SelectItem>
+                  <SelectItem value="Под заказ">Под заказ</SelectItem>
                 </SelectContent>
               </Select>
             </div>
+
+            {/* Ценовой диапазон */}
             <div className="lg:col-span-2">
               <label className="text-sm font-medium mb-2 block">
                 Ценовой диапазон: {priceRange[0].toLocaleString()} - {priceRange[1].toLocaleString()} ₽
