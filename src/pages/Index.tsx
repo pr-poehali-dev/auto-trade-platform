@@ -39,7 +39,7 @@ export default function Index() {
               <img 
                 src="https://cdn.poehali.dev/files/ac28145d-d3ec-465c-95bd-abbb00746be8.png" 
                 alt="АвтоОпт лого" 
-                className="w-12 h-12 object-contain"
+                className="w-16 h-16 object-contain"
               />
               <div>
                 <h1 className="text-2xl font-bold text-slate-800">ШинОил</h1>
