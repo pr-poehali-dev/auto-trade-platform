@@ -99,7 +99,7 @@ export const oilProducts: OilProduct[] = [
     price: 6250,
     stock: "В наличии",
     image:
-      "/img/C:\Users\corsi\OneDrive\Рабочий стол\Леша\Фото Ассортимента\LM",
+      "https://new.alleya-group.ru/upload/iblock/358/kvb7qjqp17e9sw8krndpsnmskvou6rq7/ffdf024b-f87a-11e4-b814-0015175582ed.jpeg",
     description:
       "Синтетическое малозольное (Mid SAPS) моторное масло для двигателей легковых автомобилей, оснащенных двойной системой нейтрализации отработавших газов (в том числе DPF). Cоответствует экологическим нормам EURO 4 и выше.",
     specifications: {
