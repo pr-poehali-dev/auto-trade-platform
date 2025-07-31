@@ -37,7 +37,7 @@ export default function Index() {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
               <img 
-                src="/img/9393abd2-95df-486c-91a3-d4b54e9cb552.jpg" 
+                src="/img/72995694-4ff8-4005-a37f-983beee94384.jpg" 
                 alt="АвтоОпт лого" 
                 className="w-12 h-12 object-contain"
               />
@@ -404,7 +404,7 @@ export default function Index() {
             <div>
               <div className="flex items-center space-x-3 mb-4">
                 <img 
-                  src="/img/9393abd2-95df-486c-91a3-d4b54e9cb552.jpg" 
+                  src="/img/72995694-4ff8-4005-a37f-983beee94384.jpg" 
                   alt="ШинОил лого" 
                   className="w-10 h-10 object-contain"
                 />
