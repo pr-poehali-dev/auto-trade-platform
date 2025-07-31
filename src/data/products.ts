@@ -55,7 +55,7 @@ export interface ChemicalProduct {
 export const oilProducts: OilProduct[] = [
   {
     id: 3709,
-    name: "Top Tec 4200 New Generation",
+    name: "3709 Liqui Moly Top Tec 4200 New Generation",
     brand: "Liqui Moly",
     category: "Синтетическое",
     viscosity: "5W-30",
