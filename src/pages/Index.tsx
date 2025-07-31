@@ -42,7 +42,7 @@ export default function Index() {
                 className="w-12 h-12 object-contain"
               />
               <div>
-                <h1 className="text-2xl font-bold text-slate-800">АвтоОпт</h1>
+                <h1 className="text-2xl font-bold text-slate-800">ШинОил</h1>
                 <p className="text-sm text-slate-600">Оптовые поставки автомасел и шин</p>
               </div>
             </div>
@@ -191,7 +191,7 @@ export default function Index() {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold mb-6">О компании АвтоОпт</h2>
+              <h2 className="text-3xl font-bold mb-6">О компании ШинОил</h2>
               <p className="text-slate-600 mb-4">
                 Более 15 лет мы специализируемся на оптовых поставках автомобильных масел и шин. 
                 Наша компания является официальным дистрибьютором ведущих мировых брендов в России.
@@ -379,8 +379,8 @@ export default function Index() {
               </CardHeader>
               <CardContent>
                 <p className="text-slate-600">
-                  info@autoopt.ru<br/>
-                  sales@autoopt.ru
+                  info@shinoil.ru<br/>
+                  sales@shinoil.ru
                 </p>
               </CardContent>
             </Card>
@@ -405,10 +405,10 @@ export default function Index() {
               <div className="flex items-center space-x-3 mb-4">
                 <img 
                   src="/img/2986694e-94da-46a7-b073-e2fa856dd060.jpg" 
-                  alt="АвтоОпт лого" 
+                  alt="ШинОил лого" 
                   className="w-10 h-10 object-contain"
                 />
-                <h3 className="text-xl font-bold">АвтоОпт</h3>
+                <h3 className="text-xl font-bold">ШинОил</h3>
               </div>
               <p className="text-slate-300 text-sm">
                 Надежный партнер в области оптовых поставок автомобильных масел и шин
@@ -439,14 +439,14 @@ export default function Index() {
               <h4 className="font-semibold mb-4">Контакты</h4>
               <div className="space-y-2 text-sm text-slate-300">
                 <p>+7 (495) 123-45-67</p>
-                <p>info@autoopt.ru</p>
+                <p>info@shinoil.ru</p>
                 <p>г. Москва, ул. Промышленная, 15</p>
               </div>
             </div>
           </div>
           
           <div className="border-t border-slate-700 mt-8 pt-8 text-center text-sm text-slate-400">
-            <p>&copy; 2024 АвтоОпт. Все права защищены.</p>
+            <p>&copy; 2024 ШинОил. Все права защищены.</p>
           </div>
         </div>
       </footer>
