@@ -58,6 +58,7 @@ export default function SearchFilters({
               <SelectItem value="all">Все товары</SelectItem>
               <SelectItem value="oils">Автомасла</SelectItem>
               <SelectItem value="tires">Шины</SelectItem>
+              <SelectItem value="chemicals">Автохимия</SelectItem>
             </SelectContent>
           </Select>
           <Select value={sortBy} onValueChange={setSortBy}>

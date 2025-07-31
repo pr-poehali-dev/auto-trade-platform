@@ -2,54 +2,32 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
-
-interface OilProduct {
-  id: number;
-  name: string;
-  brand: string;
-  category: string;
-  viscosity: string;
-  volume: string;
-  price: number;
-  stock: string;
-  image: string;
-  description: string;
-  specifications: {
-    api: string;
-    acea: string;
-    temperature: string;
-  };
-}
-
-interface TireProduct {
-  id: number;
-  name: string;
-  size: string;
-  season: string;
-  brand: string;
-  price: number;
-  stock: string;
-  image: string;
-  description: string;
-  specifications: {
-    width: string;
-    profile: string;
-    diameter: string;
-    loadIndex: string;
-    fuelEfficiency?: string;
-    snowflakeSymbol?: string;
-  };
-}
+import { OilProduct, TireProduct, ChemicalProduct } from '@/data/products';
 
 interface ProductCardProps {
-  product: OilProduct | TireProduct;
-  type: 'oil' | 'tire';
+  product: OilProduct | TireProduct | ChemicalProduct;
+  type: 'oil' | 'tire' | 'chemical';
 }
 
 export default function ProductCard({ product, type }: ProductCardProps) {
   const isOil = type === 'oil';
+  const isTire = type === 'tire';
+  const isChemical = type === 'chemical';
   const oilProduct = product as OilProduct;
   const tireProduct = product as TireProduct;
+  const chemicalProduct = product as ChemicalProduct;
+
+  const getProductColor = () => {
+    if (isOil) return 'text-blue-600';
+    if (isTire) return 'text-orange-600';
+    return 'text-green-600';
+  };
+
+  const getButtonColor = () => {
+    if (isOil) return 'bg-orange-600 hover:bg-orange-700';
+    if (isTire) return 'bg-blue-600 hover:bg-blue-700';
+    return 'bg-green-600 hover:bg-green-700';
+  };
 
   return (
     <Card className="hover:shadow-lg transition-shadow">
@@ -57,16 +35,24 @@ export default function ProductCard({ product, type }: ProductCardProps) {
         <img src={product.image} alt={product.name} className="w-full h-32 object-cover rounded-lg mb-3" />
         <CardTitle className="text-lg">{product.name}</CardTitle>
         <CardDescription className="flex items-center gap-2 flex-wrap">
-          {isOil ? (
+          {isOil && (
             <>
               <Badge variant="secondary">{oilProduct.category}</Badge>
               <Badge variant="outline">{oilProduct.viscosity}</Badge>
               <Badge variant="outline">{oilProduct.volume}</Badge>
             </>
-          ) : (
+          )}
+          {isTire && (
             <>
               <Badge variant="secondary">{tireProduct.season}</Badge>
               <Badge variant="outline">{tireProduct.size}</Badge>
+            </>
+          )}
+          {isChemical && (
+            <>
+              <Badge variant="secondary">{chemicalProduct.category}</Badge>
+              <Badge variant="outline">{chemicalProduct.type}</Badge>
+              <Badge variant="outline">{chemicalProduct.volume}</Badge>
             </>
           )}
         </CardDescription>
@@ -82,13 +68,14 @@ export default function ProductCard({ product, type }: ProductCardProps) {
           </div>
           <p className="text-xs text-slate-500 line-clamp-2">{product.description}</p>
           <div className="text-xs text-slate-400 space-y-1">
-            {isOil ? (
+            {isOil && (
               <>
                 <div>API: {oilProduct.specifications.api}</div>
                 <div>ACEA: {oilProduct.specifications.acea}</div>
                 <div>Температура: {oilProduct.specifications.temperature}</div>
               </>
-            ) : (
+            )}
+            {isTire && (
               <>
                 <div>Ширина: {tireProduct.specifications.width}</div>
                 <div>Индекс нагрузки: {tireProduct.specifications.loadIndex}</div>
@@ -97,13 +84,29 @@ export default function ProductCard({ product, type }: ProductCardProps) {
                 )}
               </>
             )}
+            {isChemical && (
+              <>
+                {chemicalProduct.specifications.standard && (
+                  <div>Стандарт: {chemicalProduct.specifications.standard}</div>
+                )}
+                {chemicalProduct.specifications.freezingPoint && (
+                  <div>Температура замерзания: {chemicalProduct.specifications.freezingPoint}</div>
+                )}
+                {chemicalProduct.specifications.boilingPoint && (
+                  <div>Температура кипения: {chemicalProduct.specifications.boilingPoint}</div>
+                )}
+                {chemicalProduct.specifications.application && (
+                  <div>Применение: {chemicalProduct.specifications.application}</div>
+                )}
+              </>
+            )}
           </div>
         </div>
         <div className="flex justify-between items-center">
-          <span className={`text-2xl font-bold ${isOil ? 'text-blue-600' : 'text-orange-600'}`}>
+          <span className={`text-2xl font-bold ${getProductColor()}`}>
             {product.price.toLocaleString()} ₽
           </span>
-          <Button size="sm" className={isOil ? 'bg-orange-600 hover:bg-orange-700' : 'bg-blue-600 hover:bg-blue-700'}>
+          <Button size="sm" className={getButtonColor()}>
             <Icon name="ShoppingCart" size={16} />
             В корзину
           </Button>

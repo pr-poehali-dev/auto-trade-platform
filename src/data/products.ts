@@ -1,24 +1,17 @@
 export interface OilProduct {
-  id: 3709;
-  name: Top Tec 4200 New Generation;
-  brand: Liqui Moly;
-  category: Синтетическое;
-  viscosity: 5W-30;
-  volume: 60л;
-  price: 86700;
-  stock: 5;
-  image: "C:\Users\corsi\OneDrive\Рабочий стол\Леша\Фото Ассортимента\LM\3709.jpg";
-  description: Обладает именным допусками для автомобилей концерна VW-Audi с Longlife - сервисом. Также имеет специальные допуска других производителей. Соответствует стандартам EURO 4 и выше. Отлично подходит при использовании природного и сжиженного газа (CNG/LPG). Допуск:
--API: SP
--ACEA: C3
--BMW: Longlife-04
--MB: 229.31/229.51/229.52
--Porsche: C30
--VW: 504 00/507 00
--Opel: OV 040 1547 - D30/OV 040 1547 - G30;
+  id: number;
+  name: string;
+  brand: string;
+  category: string;
+  viscosity: string;
+  volume: string;
+  price: number;
+  stock: string;
+  image: string;
+  description: string;
   specifications: {
-    api: SP;
-    acea: C3;
+    api: string;
+    acea: string;
     temperature: string;
   };
 }
@@ -40,6 +33,26 @@ export interface TireProduct {
     loadIndex: string;
     fuelEfficiency?: string;
     snowflakeSymbol?: string;
+  };
+}
+
+export interface ChemicalProduct {
+  id: number;
+  name: string;
+  brand: string;
+  category: string;
+  type: string;
+  volume: string;
+  price: number;
+  stock: string;
+  image: string;
+  description: string;
+  specifications: {
+    standard?: string;
+    freezingPoint?: string;
+    boilingPoint?: string;
+    color?: string;
+    application?: string;
   };
 }
 
@@ -157,7 +170,7 @@ export const tireProducts: TireProduct[] = [
     brand: 'Michelin',
     price: 8500,
     stock: 'В наличии',
-    image: '/img/8ab4bac8-79ad-4019-8b7d-d31868e0де4f.jpg',
+    image: '/img/8ab4bac8-79ad-4019-8b7d-d31868e0de4f.jpg',
     description: 'Премиальные летние шины с улучшенным сцеплением на мокрой дороге',
     specifications: {
       width: '205 мм',
@@ -193,7 +206,7 @@ export const tireProducts: TireProduct[] = [
     brand: 'Bridgestone',
     price: 9800,
     stock: 'Под заказ',
-    image: '/img/8ab4bac8-79ad-4019-8b7d-d31868e0де4f.jpg',
+    image: '/img/8ab4bac8-79ad-4019-8b7d-d31868e0de4f.jpg',
     description: 'Летние шины премиум-класса для комфортной езды',
     specifications: {
       width: '225 мм',
@@ -211,7 +224,7 @@ export const tireProducts: TireProduct[] = [
     brand: 'Nokian',
     price: 12500,
     stock: 'В наличии',
-    image: '/img/8ab4bac8-79ad-4019-8b7d-d31868e0де4f.jpg',
+    image: '/img/8ab4bac8-79ad-4019-8b7d-d31868e0de4f.jpg',
     description: 'Фрикционные зимние шины без шипов для суровых условий',
     specifications: {
       width: '225 мм',
@@ -229,7 +242,7 @@ export const tireProducts: TireProduct[] = [
     brand: 'Pirelli',
     price: 8900,
     stock: 'В наличии',
-    image: '/img/8ab4bac8-79ad-4019-8b7d-d31868e0де4f.jpg',
+    image: '/img/8ab4bac8-79ad-4019-8b7d-d31868e0de4f.jpg',
     description: 'Экологичные летние шины с низким сопротивлением качению',
     specifications: {
       width: '215 мм',
@@ -247,7 +260,7 @@ export const tireProducts: TireProduct[] = [
     brand: 'Yokohama',
     price: 5800,
     stock: 'В наличии',
-    image: '/img/8ab4bac8-79ad-4019-8b7d-d31868e0де4f.jpg',
+    image: '/img/8ab4bac8-79ad-4019-8b7d-d31868e0de4f.jpg',
     description: 'Экономичные летние шины с хорошими характеристиками',
     specifications: {
       width: '185 мм',
@@ -255,6 +268,178 @@ export const tireProducts: TireProduct[] = [
       diameter: 'R15',
       loadIndex: '84H',
       fuelEfficiency: 'C'
+    }
+  }
+];
+
+export const chemicalProducts: ChemicalProduct[] = [
+  {
+    id: 1,
+    name: 'Felix Carbox G12+ Красный',
+    brand: 'Felix',
+    category: 'Антифриз',
+    type: 'G12+',
+    volume: '5л',
+    price: 850,
+    stock: 'В наличии',
+    image: '/img/1cd49f26-a4e6-4b94-8ed4-950853efccbc.jpg',
+    description: 'Готовый к применению антифриз на основе этиленгликоля с карбоксилатными присадками',
+    specifications: {
+      standard: 'G12+',
+      freezingPoint: 'до -40°C',
+      boilingPoint: '+108°C',
+      color: 'Красный'
+    }
+  },
+  {
+    id: 2,
+    name: 'Sintec Antifreeze Lux G12',
+    brand: 'Sintec',
+    category: 'Антифриз',
+    type: 'G12',
+    volume: '10л',
+    price: 1200,
+    stock: 'В наличии',
+    image: '/img/1cd49f26-a4e6-4b94-8ed4-950853efccbc.jpg',
+    description: 'Карбоксилатный антифриз повышенного качества для современных двигателей',
+    specifications: {
+      standard: 'G12',
+      freezingPoint: 'до -42°C',
+      boilingPoint: '+109°C',
+      color: 'Красный'
+    }
+  },
+  {
+    id: 3,
+    name: 'Lukoil Antifreeze G11 Синий',
+    brand: 'Lukoil',
+    category: 'Антифриз',
+    type: 'G11',
+    volume: '5л',
+    price: 720,
+    stock: 'В наличии',
+    image: '/img/1cd49f26-a4e6-4b94-8ed4-950853efccbc.jpg',
+    description: 'Силикатный антифриз для универсального применения',
+    specifications: {
+      standard: 'G11',
+      freezingPoint: 'до -40°C',
+      boilingPoint: '+105°C',
+      color: 'Синий'
+    }
+  },
+  {
+    id: 4,
+    name: 'ATE DOT 4 TYP 200',
+    brand: 'ATE',
+    category: 'Тормозная жидкость',
+    type: 'DOT 4',
+    volume: '1л',
+    price: 450,
+    stock: 'В наличии',
+    image: '/img/09f9e4dc-f203-472f-bd71-2db5ad250b68.jpg',
+    description: 'Высококачественная тормозная жидкость для дисковых и барабанных тормозов',
+    specifications: {
+      standard: 'DOT 4',
+      boilingPoint: '+230°C',
+      application: 'Тормозные системы'
+    }
+  },
+  {
+    id: 5,
+    name: 'Castrol React Performance DOT 4',
+    brand: 'Castrol',
+    category: 'Тормозная жидкость',
+    type: 'DOT 4',
+    volume: '1л',
+    price: 520,
+    stock: 'В наличии',
+    image: '/img/09f9e4dc-f203-472f-bd71-2db5ad250b68.jpg',
+    description: 'Премиальная тормозная жидкость для высоконагруженных тормозных систем',
+    specifications: {
+      standard: 'DOT 4',
+      boilingPoint: '+265°C',
+      application: 'Спортивные автомобили'
+    }
+  },
+  {
+    id: 6,
+    name: 'Brembo DOT 3',
+    brand: 'Brembo',
+    category: 'Тормозная жидкость',
+    type: 'DOT 3',
+    volume: '0.5л',
+    price: 380,
+    stock: 'Мало',
+    image: '/img/09f9e4dc-f203-472f-bd71-2db5ad250b68.jpg',
+    description: 'Стандартная тормозная жидкость для легковых автомобилей',
+    specifications: {
+      standard: 'DOT 3',
+      boilingPoint: '+205°C',
+      application: 'Легковые автомобили'
+    }
+  },
+  {
+    id: 7,
+    name: 'Hi-Gear Очиститель двигателя',
+    brand: 'Hi-Gear',
+    category: 'Очистители',
+    type: 'Обезжириватель',
+    volume: '946мл',
+    price: 350,
+    stock: 'В наличии',
+    image: '/img/f5d638b5-8935-4c40-ab33-bac2979a445f.jpg',
+    description: 'Профессиональный очиститель для наружной мойки двигателя и подкапотного пространства',
+    specifications: {
+      application: 'Двигатель, детали',
+      color: 'Прозрачный'
+    }
+  },
+  {
+    id: 8,
+    name: 'Sonax Омыватель стекол зимний',
+    brand: 'Sonax',
+    category: 'Омыватели',
+    type: 'Зимний',
+    volume: '4л',
+    price: 280,
+    stock: 'В наличии',
+    image: '/img/f5d638b5-8935-4c40-ab33-bac2979a445f.jpg',
+    description: 'Концентрированная жидкость для омывания стекол в зимний период',
+    specifications: {
+      freezingPoint: 'до -25°C',
+      application: 'Омыватель стекол'
+    }
+  },
+  {
+    id: 9,
+    name: 'Liqui Moly Автошампунь',
+    brand: 'Liqui Moly',
+    category: 'Автошампуни',
+    type: 'Концентрат',
+    volume: '1л',
+    price: 420,
+    stock: 'В наличии',
+    image: '/img/f5d638b5-8935-4c40-ab33-bac2979a445f.jpg',
+    description: 'Концентрированный автошампунь для бесконтактной мойки',
+    specifications: {
+      application: 'Кузов автомобиля',
+      color: 'Желтый'
+    }
+  },
+  {
+    id: 10,
+    name: 'Shell Spirax S4 ATF HDX',
+    brand: 'Shell',
+    category: 'Трансмиссионная жидкость',
+    type: 'ATF',
+    volume: '4л',
+    price: 2800,
+    stock: 'В наличии',
+    image: '/img/09f9e4dc-f203-472f-bd71-2db5ad250b68.jpg',
+    description: 'Синтетическая жидкость для автоматических трансмиссий',
+    specifications: {
+      standard: 'Dexron VI',
+      application: 'АКПП, гидроусилитель'
     }
   }
 ];

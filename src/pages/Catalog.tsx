@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
 import SearchFilters from '@/components/catalog/SearchFilters';
 import ProductGrid from '@/components/catalog/ProductGrid';
-import { oilProducts, tireProducts } from '@/data/products';
+import { oilProducts, tireProducts, chemicalProducts } from '@/data/products';
 
 export default function Catalog() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -29,6 +29,16 @@ export default function Catalog() {
     const matchesSearch = product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          product.brand.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          product.size.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesBrand = selectedBrand === 'all' || product.brand === selectedBrand;
+    const matchesPrice = product.price >= priceRange[0] && product.price <= priceRange[1];
+    
+    return matchesSearch && matchesBrand && matchesPrice;
+  });
+
+  const filteredChemicals = chemicalProducts.filter(product => {
+    const matchesSearch = product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         product.brand.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         product.category.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesBrand = selectedBrand === 'all' || product.brand === selectedBrand;
     const matchesPrice = product.price >= priceRange[0] && product.price <= priceRange[1];
     
@@ -70,7 +80,7 @@ export default function Catalog() {
         {/* Page Title */}
         <div className="mb-8">
           <h2 className="text-3xl font-bold text-slate-900 mb-2">Каталог товаров</h2>
-          <p className="text-slate-600">Более 5000 наименований автомасел и шин в наличии</p>
+          <p className="text-slate-600">Более 5000 наименований автомасел, шин и автохимии в наличии</p>
         </div>
 
         {/* Search and Filters */}
@@ -95,7 +105,8 @@ export default function Catalog() {
         <div className="mb-6">
           <p className="text-slate-600">
             Найдено товаров: {(selectedCategory === 'all' || selectedCategory === 'oils' ? filteredOils.length : 0) + 
-                              (selectedCategory === 'all' || selectedCategory === 'tires' ? filteredTires.length : 0)}
+                              (selectedCategory === 'all' || selectedCategory === 'tires' ? filteredTires.length : 0) +
+                              (selectedCategory === 'all' || selectedCategory === 'chemicals' ? filteredChemicals.length : 0)}
           </p>
         </div>
 
@@ -104,6 +115,7 @@ export default function Catalog() {
           selectedCategory={selectedCategory}
           filteredOils={filteredOils}
           filteredTires={filteredTires}
+          filteredChemicals={filteredChemicals}
         />
       </div>
 
