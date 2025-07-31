@@ -1,17 +1,24 @@
 export interface OilProduct {
-  id: number;
-  name: string;
-  brand: string;
-  category: string;
-  viscosity: string;
-  volume: string;
-  price: number;
-  stock: string;
-  image: string;
-  description: string;
+  id: 3709;
+  name: Top Tec 4200 New Generation;
+  brand: Liqui Moly;
+  category: Синтетическое;
+  viscosity: 5W-30;
+  volume: 60л;
+  price: 86700;
+  stock: 5;
+  image: "C:\Users\corsi\OneDrive\Рабочий стол\Леша\Фото Ассортимента\LM\3709.jpg";
+  description: Обладает именным допусками для автомобилей концерна VW-Audi с Longlife - сервисом. Также имеет специальные допуска других производителей. Соответствует стандартам EURO 4 и выше. Отлично подходит при использовании природного и сжиженного газа (CNG/LPG). Допуск:
+-API: SP
+-ACEA: C3
+-BMW: Longlife-04
+-MB: 229.31/229.51/229.52
+-Porsche: C30
+-VW: 504 00/507 00
+-Opel: OV 040 1547 - D30/OV 040 1547 - G30;
   specifications: {
-    api: string;
-    acea: string;
+    api: SP;
+    acea: C3;
     temperature: string;
   };
 }
