@@ -37,7 +37,7 @@ export default function Index() {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
               <img 
-                src="/img/335c707c-2f26-45b2-a71d-928f9a4f66d8.jpg" 
+                src="https://cdn.poehali.dev/files/ac28145d-d3ec-465c-95bd-abbb00746be8.png" 
                 alt="АвтоОпт лого" 
                 className="w-12 h-12 object-contain"
               />
@@ -404,7 +404,7 @@ export default function Index() {
             <div>
               <div className="flex items-center space-x-3 mb-4">
                 <img 
-                  src="/img/335c707c-2f26-45b2-a71d-928f9a4f66d8.jpg" 
+                  src="https://cdn.poehali.dev/files/ac28145d-d3ec-465c-95bd-abbb00746be8.png" 
                   alt="ШинОил лого" 
                   className="w-10 h-10 object-contain"
                 />
