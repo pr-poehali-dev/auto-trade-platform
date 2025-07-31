@@ -73,9 +73,8 @@ const Index = () => {
                 <img 
                   src="https://cdn.poehali.dev/files/03db1e34-8aab-4918-b9d2-c8d4d3d3c2be.png" 
                   alt="ШинОил логотип" 
-                  className="w-12 h-12 object-contain"
+                  className="w-20 h-20 object-contain"
                 />
-                <h1 className="text-2xl font-bold font-roboto text-navy-600">ШинОил</h1>
               </div>
             </div>
             <nav className="hidden md:flex items-center space-x-8">
@@ -476,9 +475,8 @@ const Index = () => {
                 <img 
                   src="https://cdn.poehali.dev/files/03db1e34-8aab-4918-b9d2-c8d4d3d3c2be.png" 
                   alt="ШинОил логотип" 
-                  className="w-8 h-8 object-contain"
+                  className="w-16 h-16 object-contain"
                 />
-                <h3 className="text-xl font-bold font-roboto">ШинОил</h3>
               </div>
               <p className="text-gray-400 font-open-sans">
                 Ваш надежный партнер в мире автомобильных масел и шин
