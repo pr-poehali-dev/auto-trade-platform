@@ -110,6 +110,25 @@ export const oilProducts: OilProduct[] = [
     },
   },
   {
+    id: 9056,
+    name: "9056 Liqui Moly Molygen New Generation 5W-40",
+    brand: "Liqui Moly",
+    category: "Cинтетическое",
+    viscosity: "5W-40",
+    volume: "60л",
+    price: 74000,
+    stock: "В наличии",
+    image:
+      "https://new.alleya-group.ru/upload/iblock/c8c/40yozcg0ewa73c6mo6z3rcxmb5lw0rzw/63724c9c-58f5-11e3-801b-0015175582ed.jpg",
+    description:
+      "Моторное масло на синтетической базе с фирменным антифрикционным пакетом присадок Molygen, созданным на основе новейшей технологии Molecular Friction Control. Оптимально для автомобилей европейского и российского рынка. Экономит до 3,5% топлива и существенно продлевает ресурс двигателя. Моторное масло удовлетворяет современным спецификациям API/ACEA",
+    specifications: {
+      api: "SN",
+      acea: "A3/B4",
+      temperature: "-25°C/+40°C",
+    },
+  },
+  {
     id: 1002,
     name: "Shell Helix Ultra",
     brand: "Shell",
