@@ -108,6 +108,9 @@ export default function Catalog() {
                               (selectedCategory === 'all' || selectedCategory === 'tires' ? filteredTires.length : 0) +
                               (selectedCategory === 'all' || selectedCategory === 'chemicals' ? filteredChemicals.length : 0)}
           </p>
+          <p className="text-xs text-slate-400 mt-1">
+            Масла: {filteredOils.length}, Шины: {filteredTires.length}, Автохимия: {filteredChemicals.length}
+          </p>
         </div>
 
         {/* Product Grid */}
