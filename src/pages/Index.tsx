@@ -70,7 +70,11 @@ const Index = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-2">
-                <Icon name="Car" size={32} className="text-orange-500" />
+                <img 
+                  src="/img/2d64d5a1-e700-4cb5-9587-032ae1536e5d.jpg" 
+                  alt="ШинОил логотип" 
+                  className="w-12 h-12 object-contain"
+                />
                 <h1 className="text-2xl font-bold font-roboto text-navy-600">ШинОил</h1>
               </div>
             </div>
@@ -469,7 +473,11 @@ const Index = () => {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <Icon name="Car" size={24} className="text-orange-500" />
+                <img 
+                  src="/img/2d64d5a1-e700-4cb5-9587-032ae1536e5d.jpg" 
+                  alt="ШинОил логотип" 
+                  className="w-8 h-8 object-contain"
+                />
                 <h3 className="text-xl font-bold font-roboto">ШинОил</h3>
               </div>
               <p className="text-gray-400 font-open-sans">
