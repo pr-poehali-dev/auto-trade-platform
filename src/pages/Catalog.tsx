@@ -12,6 +12,9 @@ export default function Catalog() {
   const [selectedViscosity, setSelectedViscosity] = useState('all');
   const [selectedSeason, setSelectedSeason] = useState('all');
   const [selectedTireSize, setSelectedTireSize] = useState('all');
+  const [selectedTireWidth, setSelectedTireWidth] = useState('all');
+  const [selectedTireHeight, setSelectedTireHeight] = useState('all');
+  const [selectedTireDiameter, setSelectedTireDiameter] = useState('all');
   const [selectedChemicalType, setSelectedChemicalType] = useState('all');
   const [selectedStock, setSelectedStock] = useState('all');
   const [priceRange, setPriceRange] = useState([0, 100000]);
@@ -37,10 +40,22 @@ export default function Catalog() {
     const matchesBrand = selectedBrand === 'all' || product.brand === selectedBrand;
     const matchesSeason = selectedSeason === 'all' || product.season === selectedSeason;
     const matchesTireSize = selectedTireSize === 'all' || product.size === selectedTireSize;
+    
+    // Разбираем размер шины (например, "205/55 R16")
+    const sizeParts = product.size.split(/[/\s]+/);
+    const width = sizeParts[0];
+    const height = sizeParts[1];
+    const diameter = sizeParts[2]?.replace('R', '');
+    
+    const matchesWidth = selectedTireWidth === 'all' || width === selectedTireWidth;
+    const matchesHeight = selectedTireHeight === 'all' || height === selectedTireHeight;
+    const matchesDiameter = selectedTireDiameter === 'all' || diameter === selectedTireDiameter;
+    
     const matchesStock = selectedStock === 'all' || product.stock === selectedStock;
     const matchesPrice = product.price >= priceRange[0] && product.price <= priceRange[1];
     
-    return matchesSearch && matchesBrand && matchesSeason && matchesTireSize && matchesStock && matchesPrice;
+    return matchesSearch && matchesBrand && matchesSeason && matchesTireSize && 
+           matchesWidth && matchesHeight && matchesDiameter && matchesStock && matchesPrice;
   });
 
   const filteredChemicals = chemicalProducts.filter(product => {
@@ -107,6 +122,12 @@ export default function Catalog() {
           setSelectedSeason={setSelectedSeason}
           selectedTireSize={selectedTireSize}
           setSelectedTireSize={setSelectedTireSize}
+          selectedTireWidth={selectedTireWidth}
+          setSelectedTireWidth={setSelectedTireWidth}
+          selectedTireHeight={selectedTireHeight}
+          setSelectedTireHeight={setSelectedTireHeight}
+          selectedTireDiameter={selectedTireDiameter}
+          setSelectedTireDiameter={setSelectedTireDiameter}
           selectedChemicalType={selectedChemicalType}
           setSelectedChemicalType={setSelectedChemicalType}
           selectedStock={selectedStock}

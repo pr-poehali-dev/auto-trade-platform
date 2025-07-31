@@ -18,6 +18,12 @@ interface SearchFiltersProps {
   setSelectedSeason: (value: string) => void;
   selectedTireSize: string;
   setSelectedTireSize: (value: string) => void;
+  selectedTireWidth: string;
+  setSelectedTireWidth: (value: string) => void;
+  selectedTireHeight: string;
+  setSelectedTireHeight: (value: string) => void;
+  selectedTireDiameter: string;
+  setSelectedTireDiameter: (value: string) => void;
   selectedChemicalType: string;
   setSelectedChemicalType: (value: string) => void;
   selectedStock: string;
@@ -43,6 +49,12 @@ export default function SearchFilters({
   setSelectedSeason,
   selectedTireSize,
   setSelectedTireSize,
+  selectedTireWidth,
+  setSelectedTireWidth,
+  selectedTireHeight,
+  setSelectedTireHeight,
+  selectedTireDiameter,
+  setSelectedTireDiameter,
   selectedChemicalType,
   setSelectedChemicalType,
   selectedStock,
@@ -183,6 +195,72 @@ export default function SearchFilters({
                     <SelectItem value="205/55 R16">205/55 R16</SelectItem>
                     <SelectItem value="215/60 R16">215/60 R16</SelectItem>
                     <SelectItem value="225/50 R17">225/50 R17</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+            )}
+
+            {/* Фильтр ширины для шин */}
+            {(selectedCategory === 'all' || selectedCategory === 'tires') && (
+              <div>
+                <label className="text-sm font-medium mb-2 block">Ширина</label>
+                <Select value={selectedTireWidth} onValueChange={setSelectedTireWidth}>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Все ширины" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">Все ширины</SelectItem>
+                    <SelectItem value="185">185</SelectItem>
+                    <SelectItem value="195">195</SelectItem>
+                    <SelectItem value="205">205</SelectItem>
+                    <SelectItem value="215">215</SelectItem>
+                    <SelectItem value="225">225</SelectItem>
+                    <SelectItem value="235">235</SelectItem>
+                    <SelectItem value="245">245</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+            )}
+
+            {/* Фильтр высоты для шин */}
+            {(selectedCategory === 'all' || selectedCategory === 'tires') && (
+              <div>
+                <label className="text-sm font-medium mb-2 block">Высота</label>
+                <Select value={selectedTireHeight} onValueChange={setSelectedTireHeight}>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Все высоты" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">Все высоты</SelectItem>
+                    <SelectItem value="40">40</SelectItem>
+                    <SelectItem value="45">45</SelectItem>
+                    <SelectItem value="50">50</SelectItem>
+                    <SelectItem value="55">55</SelectItem>
+                    <SelectItem value="60">60</SelectItem>
+                    <SelectItem value="65">65</SelectItem>
+                    <SelectItem value="70">70</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+            )}
+
+            {/* Фильтр диаметра для шин */}
+            {(selectedCategory === 'all' || selectedCategory === 'tires') && (
+              <div>
+                <label className="text-sm font-medium mb-2 block">Диаметр</label>
+                <Select value={selectedTireDiameter} onValueChange={setSelectedTireDiameter}>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Все диаметры" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">Все диаметры</SelectItem>
+                    <SelectItem value="14">R14</SelectItem>
+                    <SelectItem value="15">R15</SelectItem>
+                    <SelectItem value="16">R16</SelectItem>
+                    <SelectItem value="17">R17</SelectItem>
+                    <SelectItem value="18">R18</SelectItem>
+                    <SelectItem value="19">R19</SelectItem>
+                    <SelectItem value="20">R20</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
