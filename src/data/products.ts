@@ -73,7 +73,7 @@ export const oilProducts: OilProduct[] = [
   },
   {
     id: 3758,
-    name: "Top Tec 4600",
+    name: "3758 Liqui Moly Top Tec 4600",
     brand: "Liqui Moly",
     category: "Синтетическое",
     viscosity: "5W-30",
