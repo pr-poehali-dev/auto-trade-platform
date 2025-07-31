@@ -26,6 +26,11 @@ export interface TireProduct {
   stock: string;
   image: string;
   description: string;
+  specifications: {
+    width: string;
+    loadIndex: string;
+    fuelEfficiency?: string;
+  };
 }
 
 export interface ChemicalProduct {
@@ -38,6 +43,13 @@ export interface ChemicalProduct {
   stock: string;
   image: string;
   description: string;
+  type?: string;
+  specifications: {
+    standard?: string;
+    freezingPoint?: string;
+    boilingPoint?: string;
+    application?: string;
+  };
 }
 
 export const oilProducts: OilProduct[] = [
@@ -121,7 +133,12 @@ export const tireProducts: TireProduct[] = [
     price: 8900,
     stock: 'В наличии',
     image: '/img/tire-1.jpg',
-    description: 'Летние шины с отличными характеристиками торможения на мокрой дороге и длительным сроком службы.'
+    description: 'Летние шины с отличными характеристиками торможения на мокрой дороге и длительным сроком службы.',
+    specifications: {
+      width: '205мм',
+      loadIndex: '91H',
+      fuelEfficiency: 'A'
+    }
   },
   {
     id: 2002,
@@ -132,7 +149,11 @@ export const tireProducts: TireProduct[] = [
     price: 7200,
     stock: 'В наличии',
     image: '/img/tire-2.jpg',
-    description: 'Зимние фрикционные шины с превосходным сцеплением на снегу и льду.'
+    description: 'Зимние фрикционные шины с превосходным сцеплением на снегу и льду.',
+    specifications: {
+      width: '195мм',
+      loadIndex: '91T'
+    }
   },
   {
     id: 2003,
@@ -143,7 +164,12 @@ export const tireProducts: TireProduct[] = [
     price: 12500,
     stock: 'Мало',
     image: '/img/tire-3.jpg',
-    description: 'Премиальные летние шины для комфортной и безопасной езды.'
+    description: 'Премиальные летние шины для комфортной и безопасной езды.',
+    specifications: {
+      width: '225мм',
+      loadIndex: '94W',
+      fuelEfficiency: 'B'
+    }
   },
   {
     id: 2004,
@@ -154,7 +180,11 @@ export const tireProducts: TireProduct[] = [
     price: 9800,
     stock: 'В наличии',
     image: '/img/tire-4.jpg',
-    description: 'Шипованные зимние шины для экстремальных условий эксплуатации.'
+    description: 'Шипованные зимние шины для экстремальных условий эксплуатации.',
+    specifications: {
+      width: '215мм',
+      loadIndex: '95T'
+    }
   }
 ];
 
@@ -168,7 +198,14 @@ export const chemicalProducts: ChemicalProduct[] = [
     price: 690,
     stock: 'В наличии',
     image: '/img/chemical-1.jpg',
-    description: 'Готовый к применению антифриз G11 для системы охлаждения двигателя.'
+    description: 'Готовый к применению антифриз G11 для системы охлаждения двигателя.',
+    type: 'G11',
+    specifications: {
+      standard: 'ГОСТ 28084-89',
+      freezingPoint: '-40°C',
+      boilingPoint: '+108°C',
+      application: 'Легковые авто'
+    }
   },
   {
     id: 3002,
@@ -179,7 +216,13 @@ export const chemicalProducts: ChemicalProduct[] = [
     price: 850,
     stock: 'В наличии',
     image: '/img/chemical-2.jpg',
-    description: 'Высококачественная тормозная жидкость DOT 4 для гидравлических тормозных систем.'
+    description: 'Высококачественная тормозная жидкость DOT 4 для гидравлических тормозных систем.',
+    type: 'DOT 4',
+    specifications: {
+      standard: 'SAE J1703',
+      boilingPoint: '+230°C',
+      application: 'Тормозные системы'
+    }
   },
   {
     id: 3003,
@@ -190,7 +233,10 @@ export const chemicalProducts: ChemicalProduct[] = [
     price: 420,
     stock: 'В наличии',
     image: '/img/chemical-3.jpg',
-    description: 'Быстрая промывка двигателя для удаления отложений и шлама.'
+    description: 'Быстрая промывка двигателя для удаления отложений и шлама.',
+    specifications: {
+      application: 'Бензин/дизель'
+    }
   },
   {
     id: 3004,
@@ -201,6 +247,9 @@ export const chemicalProducts: ChemicalProduct[] = [
     price: 320,
     stock: 'В наличии',
     image: '/img/chemical-4.jpg',
-    description: 'Профессиональный очиститель для автомобильных стекол без разводов.'
+    description: 'Профессиональный очиститель для автомобильных стекол без разводов.',
+    specifications: {
+      application: 'Стекла автомобиля'
+    }
   }
 ];
