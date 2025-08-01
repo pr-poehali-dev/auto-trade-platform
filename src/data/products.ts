@@ -191,8 +191,7 @@ export const tireProducts: TireProduct[] = [
     price: 9775,
     stock: "В наличии",
     image: "https://vershinatyres.ru/storage/155774/mid_square.jpg",
-    description:
-      "Летние шины",
+    description: "Летние шины",
     specifications: {
       width: "265мм",
       loadIndex: "110H",
