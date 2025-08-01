@@ -182,22 +182,7 @@ export const tireProducts: TireProduct[] = [
       fuelEfficiency: "",
     },
   },
-  {
-    id: 2ESO606F,
-    name: "SONIX 265/60R18 110H PRIMEMARCH H/T 79",
-    brand: "DYNAMO",
-    size: "265/60 R18",
-    season: "Летние",
-    price: 9775,
-    stock: "В наличии",
-    image: "https://vershinatyres.ru/storage/155774/mid_square.jpg",
-    description: "Летние шины",
-    specifications: {
-      width: "265мм",
-      loadIndex: "110H",
-      fuelEfficiency: "",
-    },
-  },
+
   {
     id: 2002,
     name: "Continental WinterContact",
