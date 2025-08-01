@@ -184,7 +184,7 @@ export const tireProducts: TireProduct[] = [
   },
   {
     id: 2ESO606F,
-    name: " SONIX 265/60R18 110H PRIMEMARCH H/T 79",
+    name: "SONIX 265/60R18 110H PRIMEMARCH H/T 79",
     brand: "DYNAMO",
     size: "265/60 R18",
     season: "Летние",
