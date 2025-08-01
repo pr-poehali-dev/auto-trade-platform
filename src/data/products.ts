@@ -167,6 +167,23 @@ export const tireProducts: TireProduct[] = [
     },
   },
   {
+    id: 3220011248,
+    name: "DYNAMO (SAILUN Group) 265/60R18 110H HISCEND-H MHT01",
+    brand: "DYNAMO",
+    size: "265/60 R18",
+    season: "Летние",
+    price: 10024,
+    stock: "В наличии",
+    image: "https://vershinatyres.ru/storage/180132/mht01.jpg",
+    description: "Летние шины",
+    specifications: {
+      width: "265мм",
+      loadIndex: "110H",
+      fuelEfficiency: "",
+    },
+  },
+
+  {
     id: 2002,
     name: "Continental WinterContact",
     brand: "Continental",
