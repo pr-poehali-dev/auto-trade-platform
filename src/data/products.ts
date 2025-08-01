@@ -151,20 +151,19 @@ export const oilProducts: OilProduct[] = [
 
 export const tireProducts: TireProduct[] = [
   {
-    id: 2001,
-    name: "Michelin Primacy 4",
-    brand: "Michelin",
-    size: "205/55 R16",
+    id: 2732068526,
+    name: " CORDIANT 265/60R18 114H COMFORT 2 SUV",
+    brand: "CORDIANT",
+    size: "265/60 R18",
     season: "Летние",
-    price: 8900,
+    price: 12320,
     stock: "В наличии",
-    image: "/img/tire-1.jpg",
-    description:
-      "Летние шины с отличными характеристиками торможения на мокрой дороге и длительным сроком службы.",
+    image: "https://vershinatyres.ru/storage/155764/Comfort2.jpg",
+    description: "Летние шины",
     specifications: {
-      width: "205мм",
-      loadIndex: "91H",
-      fuelEfficiency: "A",
+      width: "265мм",
+      loadIndex: "114H",
+      fuelEfficiency: "",
     },
   },
   {
