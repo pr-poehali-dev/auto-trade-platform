@@ -182,7 +182,6 @@ export const tireProducts: TireProduct[] = [
       fuelEfficiency: "",
     },
   },
-
   {
     id: 2002,
     name: "Continental WinterContact",
