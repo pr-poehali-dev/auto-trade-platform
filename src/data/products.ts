@@ -152,7 +152,7 @@ export const oilProducts: OilProduct[] = [
 export const tireProducts: TireProduct[] = [
   {
     id: 2732068526,
-    name: " CORDIANT 265/60R18 114H COMFORT 2 SUV",
+    name: "CORDIANT 265/60R18 114H COMFORT 2 SUV",
     brand: "CORDIANT",
     size: "265/60 R18",
     season: "Летние",
